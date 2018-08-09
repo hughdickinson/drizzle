@@ -263,7 +263,7 @@ class Drizzle(object):
 
                 if hdu is not None:
                     insci = hdu.data
-                    inwcs = wcs.WCS(header=hdu.header)
+                    inwcs = wcs.WCS(header=hdu.header, fobj=handle)
                     insci = hdu.data.copy()
                 handle.close()
 
